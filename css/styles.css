@@ -31,3 +31,40 @@ main {
 h1 {
 	text-align: center;
 }
+
+.link-skip {
+	position: absolute;
+	left: -999px;
+}
+
+.link-skip:focus {
+	left: 1rem;
+	top: 1rem;
+	background: #fff;
+	padding: 0.5rem;
+}
+
+.site-header {
+	background-color: var(--main);
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.site-header a {
+	color: #fff;
+}
+
+.logo {
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.toggle-navigation {
+	display: inline-block;
+	margin: 0;
+	padding: 0.5rem 1rem;
+}
