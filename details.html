@@ -16,3 +16,64 @@
                 <script src="js/api.js" defer></script>
                 <script src="js/main.js" defer></script>
         </head>
+
+<!-- Button for skipping back to main content once there has been a search completed -->
+
+	<body>
+                <a href="#main" class="link-skip">Skip To Main Content</a>
+
+<!-- Site header specifically for details page. Also buttons for moving around menu such as Search and Suggest A Movie -->
+
+                <header class="site-header">
+                        <a href="index.html" class="logo">
+				<img src="images/logo.svg" alt="" width="32" height="32">
+				Movie Database
+			</a>
+                        <button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+                        <nav id="site-navigation" aria-label="Main">
+                                <ul>
+                                        <li><a href="index.html">Search</a></li>
+                                        <li><a href="suggest.html">Suggest A Movie</a></li>
+                                </ul>
+                        </nav>
+                </header>
+
+<!-- Back to Search following search being commpleted. -->
+
+                <main id="main">
+    			<a href="index.html">Back To Search</a>
+
+<!-- Header 1 for loading movie. Then showing movie poster, year, genre and then rating. movie plot to come at the end. All from TMDB -->
+
+    			<article>
+      				<h1 id="movie-title">Loading Movie</h1>
+      				<figure id="movie-poster"></figure>
+      				<dl>
+       		 			<dt>Year</dt>   <dd id="movie-year"></dd>
+        				<dt>Genre</dt>  <dd id="movie-genre"></dd>
+        				<dt>Rating</dt> <dd id="movie-rating"></dd>
+      				</dl>
+      				<h2>Plot</h2>
+      				<p id="movie-plot"></p>
+
+<!-- Section 2 to contain all information regarding ratings and review. Director, Age Rating, Awards etc. All from OMDB. -->
+
+				<section id ="omdb-info" aria-labelledby="omdb-heading">
+					<h2 id="omdb-heading">Critics And Awards</h2>
+					<dl>
+						<dt>Director</dt>	<dd id="omdb-director">Loading</dd>
+						<dt>Age Rating</dt>	<dd id="omdb-rated">Loading</dd>
+						<dt>Awards</dt>		<dd id="omdb-awards">Loading</dd>
+					</dl>
+					<ul id="omdb-ratings"></ul>
+				</section>
+    			</article>
+  		</main>
+
+<!-- Same footer to be included across all pages same as that on the first main page. -->
+
+                <footer class="site-footer">
+                        <p>&copy; 2026 Josh Coates. Film data from TMDB + OMDB.</p>
+                </footer>
+        </body>
+</html>
