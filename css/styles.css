@@ -363,3 +363,16 @@ article dd {
 	list-style: none;
 	padding: 0;
 }
+
+.logo {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.hero-logo {
+	display: block;
+	width: 96px;
+	height: auto;
+	margin: 1rem auto 0;
+}
