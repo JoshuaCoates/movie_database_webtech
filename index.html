@@ -3,3 +3,34 @@
 <!-- index.html -->
 <!-- https://github.com/JoshuaCoates/movie_database_webtech/blob/main/index.html -->
 
+<!-- Header added to give correct tile at top of page when loading page in browser tabs -->
+<html>
+	<html lang="en-GB">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Search Movies | Movie Database</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="js/api.js" defer></script>
+		<script src="js/main.js" defer></script>
+	</head>
+
+<!-- Body allows for logo alognside headers required for navigation bar along top level.-->
+<!-- https://www.w3.org/TR/using-aria/ -->
+
+	<body>
+		<a href="#main" class="link-skip">Skip To Main Content</a>
+
+		<header class="site-header">
+			<a href="index.html" class="logo">
+				<img src="images/logo.svg" alt="" width="32" height="32">
+				Movie Database
+			</a>
+			<button class="navigation-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+			<nav id="site-navigation" aria-label="Main">
+				<ul>
+					<li><a href="index.html" aria-current="page">Search</a></li>
+					<li><a href="suggest.html">Suggest A Movie</a></li>
+				</ul>
+			</nav>
+		</header>
