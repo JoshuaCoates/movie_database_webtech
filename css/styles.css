@@ -306,3 +306,60 @@ textarea[aria-invalid="true"] {
 	color: var(--main);
 	text-decoration: none;
 }
+
+.movie-card a:hover h3,
+.movie-card a:focus h3 {
+	text-decoration: underline;
+}
+
+.movie-card img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.movie-card h3 {
+	font-size: 1rem;
+	margin: 0.75rem 0.5rem 0.25rem;
+}
+
+.movie-card p {
+	font-size: 0.9rem;
+	margin: 0 0.5rem 0.75rem;
+}
+
+@media (min-width: 768px) {
+	#results-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+article {
+	text-align: center;
+}
+
+#movie-poster {
+	max-width: 300px;
+	margin: 1rem auto;
+}
+
+#movie-poster img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 2px solid var(--main)
+	border-radius: 4px;
+}
+
+article dt {
+	font-weight: bold;
+}
+
+article dd {
+	margin: 0 0 0.75rem;
+}
+
+#omdb-ratings {
+	list-style: none;
+	padding: 0;
+}
