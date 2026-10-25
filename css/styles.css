@@ -241,3 +241,68 @@ form button[type="submit"] {
 	margin: 0.25rem 0 0;
 	text-align: center;
 }
+
+.error-message {
+	color: #b00020;
+	font-size: 0.9rem;
+	font-weight: bold;
+	margin: 0.25rem 0 0;
+	text-align: center;
+}
+
+.error-message:empty {
+	display: none;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+	border-color: #b00020;
+	background-color: #fff5f6;
+}
+
+#reason-count.near-limit {
+	color: #8a4b00;
+	font-weight: bold;
+}
+
+.consent {
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+.confirmation {
+	margin-top: 1rem;
+	padding:1.5rem;
+	background-color: #fff;
+	border: 2px solid var(--main);
+	border-radius: 4px;
+	text-align: center;
+}
+
+.confirmation:focus {
+	outline: 3px solid var(--accent);
+}
+
+#results-list {
+	list-style: none;
+	margin: 1rem 0 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.movie-card {
+	background-color: #fff;
+	border: 2px solid var(--main);
+	border-radius: 4px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.movie-card a {
+	display: block;
+	color: var(--main);
+	text-decoration: none;
+}
