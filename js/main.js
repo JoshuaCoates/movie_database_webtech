@@ -203,7 +203,7 @@ if (movieTitle) {
 				movie.genres.map((genre) => genre.name).join(', ');
 			document.querySelector('#movie-rating').textContent =
 // Rounds returned rating to one decimal place.
-				`${movie.vote_average.toFixed(1)}/10`;
+				`${(movie.vote_average ?? 0).toFixed(1)}/10`;
 			document.querySelector('#movie-plot').textContent =
 // If there is no plot or it is empty, return below text rather than returning anything that will be incorrect for the user.
 				movie.overview || 'No Plot Summary Available!';
@@ -224,7 +224,7 @@ if (movieTitle) {
 // If errors are returned, return error message as displayed.
 		.catch((error) => {
 			console.error(error);
-			movieTitle.textContent = 'Sorry, This Movies Details Could Not Be Loaded!'
+			movieTitle.textContent = 'Sorry, This Movies Details Could Not Be Loaded!';
 		});
 	}
 }
