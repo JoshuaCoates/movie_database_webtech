@@ -2,6 +2,10 @@
 <!-- Web Technologies - Assessment 2 - Movie Database Application -->
 <!-- index.html -->
 <!-- https://github.com/JoshuaCoates/movie_database_webtech/blob/main/index.html -->
+<!-- https://www.w3schools.com/html/ -->
+<!-- https://www.w3schools.com/html/html_forms.asp -->
+<!-- https://www.w3schools.com/html/html_form_input_types.asp -->
+
 
 <!-- Header added to give correct tile at top of page when loading page in browser tabs -->
 <html>
@@ -34,3 +38,55 @@
 				</ul>
 			</nav>
 		</header>
+
+<!-- Setting out for buttons and text input to be able to search for movie on first page following loading.-->
+		
+		<main id="main">
+			<img src="images/logo.svg" alt="" class="hero-logo" width="96" height="96">
+			<h1>Find Your Next Movie</h1>
+
+<!-- First box required for searching for movie. Named Movie Title -->
+
+			<form id="search-form">
+				<label for="title">Movie Title</label>
+				<input type="search" id="title" name="title" required minlength="2">
+
+<!-- Genre drop down box. This will be populated with pulling from TMDB. -->
+
+				<label for="genre">Genre</label>
+				<select id="genre" name="genre">
+					<option value="">Any Genre</option>
+				</select>
+
+<!-- Sort by options. Either via sorting the titles Alphabetically or by the rating that is given to them -->
+
+				<fieldset>
+					<legend>Sort By</legend>
+					<input type="radio" id="title-sort" name="sort" value="title" checked>
+					<label for="title-sort">Title (A-Z)</label>
+					<input type="radio" id="rating-sorted" name="sort" value="rating">
+					<label for="rating-sorted">Highest Rated</label>
+				</fieldset>
+
+<!-- Submission button for submission of answers that have been given by the user. -->
+
+				<button type="submit">Search</button>
+			</form>
+
+<!-- Advisory bar that if nothing is entered will show to inform that there will need to be a Movie entered to be able to start the actual search. -->	
+<!-- https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16 -->
+
+			<section aria-labelledby="heading-results">
+				<h2 id="heading-results">Results</h2>
+				<p id="results-status" role="status">Enter A Movie Title To Start!</p>
+				<ul id ="results-list"></ul>
+			</section>
+		</main>
+
+<!-- Footer for reference of creator alongside where movie informationis coming from. API for TMDB and API for OMDB.-->
+
+		<footer class="site-footer">
+			<p>&copy; 2026 Josh Coates. Film data from TMDB + OMDB.</p>
+		</footer>
+	</body>
+</html>
